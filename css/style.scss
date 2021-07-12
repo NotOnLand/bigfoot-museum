@@ -1,106 +1,60 @@
-$green1: #577647;
-$green2: #86A175;
-$green3: #B7C9A8;
-$white: #F3F6F1;
-$brown1: #4A3B26;
-$brown2: #7F6C40;
-$Gotham: 'Gotham', Helvetica, Arial, sans-serif;
+@import 'bootstrap/functions', 'bootstrap/variables', 'bootstrap/mixins', 'bootstrap/pagination';
+
+$green: #89af51;
+$white: #fffde3;
+$pink: #eca7c0;
+$Archer: 'ArcherBold', Georgia, Times, "Times New Roman", serif;
+$Moderat: 'ModeratMedium', Helvetica, Arial, sans-serif;
 
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Light.woff2') format('woff2'),
-       url('fonts/Gotham-Light.woff') format('woff');
-  font-weight: 100;
-  font-style: normal
+    font-family: 'ArcherBold';
+    src: url('fonts/Archer-Bold.woff2') format('woff2'), url('fonts/Archer-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'ArcherBold';
+    src: url('fonts/Archer-Bold-Ital.woff2') format('woff2'), url('fonts/Archer-Bold-Ital.woff') format('woff');
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-LightItalic.woff2') format('woff2'),
-       url('fonts/Gotham-LightItalic.woff') format('woff');
-  font-weight: 100;
-  font-style: italic
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Medium.woff2') format('woff2'), url('fonts/Moderat-Medium.woff') format('woff');
+    font-weight: normal;
 }
-
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham.woff2') format('woff2'),
-       url('fonts/Gotham.woff') format('woff');
-  font-weight: 200;
-  font-style: normal
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Bold.woff2') format('woff2'), url('fonts/Moderat-Bold.woff') format('woff');
+    font-weight: bold;
 }
-
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Italic.woff2') format('woff2'),
-       url('fonts/Gotham-Italic.woff') format('woff');
-  font-weight: 200;
-  font-style: italic
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Medium-Ital.woff2') format('woff2'), url('fonts/Moderat-Medium-Ital.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
-
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Medium.woff2') format('woff2'),
-       url('fonts/Gotham-Medium.woff') format('woff');
-  font-weight: 400;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-MediumItalic.woff2') format('woff2'),
-       url('fonts/Gotham-MediumItalic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic
-}
-
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Bold.woff2') format('woff2'),
-       url('fonts/Gotham-Bold.woff') format('woff');
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-BoldItalic.woff2') format('woff2'),
-       url('fonts/Gotham-BoldItalic.woff') format('woff');
-  font-weight: 600;
-  font-style: italic
-}
-
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Black.woff2') format('woff2'),
-       url('fonts/Gotham-Black.woff') format('woff');
-  font-weight: 800;
-  font-style: normal
-}
-
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-BlackItalic.woff2') format('woff2'),
-       url('fonts/Gotham-BlackItalic.woff') format('woff');
-  font-weight: 800;
-  font-style: italic
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Bold-Ital.woff2') format('woff2'), url('fonts/Moderat-Bold-Ital.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
   font-family: 'MLIcons';
-  src: url('fonts/MLIcons.eot?pfjsfd');
-  src: url('fonts/MLIcons.eot?pfjsfd#iefix') format('embedded-opentype'),
-       url('fonts/MLIcons.ttf?pfjsfd') format('truetype'),
-       url('fonts/MLIcons.woff2?pfjsfd') format('woff2'),
-       url('fonts/MLIcons.woff?pfjsfd') format('woff'),
-       url('fonts/MLIcons.svg?pfjsfd#MLIcons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+src: url('fonts/MLIcons.eot?pfjsfd');
+src: url('fonts/MLIcons.eot?pfjsfd#iefix') format('embedded-opentype'),
+     url('fonts/MLIcons.ttf?pfjsfd') format('truetype'),
+     url('fonts/MLIcons.woff2?pfjsfd') format('woff2'),
+     url('fonts/MLIcons.woff?pfjsfd') format('woff'),
+     url('fonts/MLIcons.svg?pfjsfd#MLIcons') format('svg');
+font-weight: normal;
+font-style: normal;
+font-display: block;
 }
 
-i.icon-bigfoot, i.icon-foot, i.icon-foot2, i.icon-flower, i.icon-wv, i.icon-wv2 {
+i.icon-bigfoot {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'MLIcons' !important;
+  font-family: 'MLicons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -111,37 +65,22 @@ i.icon-bigfoot, i.icon-foot, i.icon-foot2, i.icon-flower, i.icon-wv, i.icon-wv2 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-i.icon-bigfoot:before {
-  content: "\e900";
-}
-i.icon-foot:before {
-  content: "\e902";
-}
-i.icon-foot2:before {
-  content: "\e903";
-}
-i.icon-flower:before {
-  content: "\e901";
-}
-i.icon-wv:before {
-  content: "\e904";
-}
-i.icon-wv2:before {
-  content: "\e905";
+  &:before {
+    content: "\e900";
+  }
 }
 
 body {
-  background-color: $green1;
+  background-color: $green;
   color: white;
-  font-family: $Gotham;
+  font-family: $Moderat;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $Gotham;
+  font-family: $Archer;
+  cursor: default;
 }
 
 h1 {
@@ -153,119 +92,284 @@ h2 {
 }
 
 header.navbar {
-  background-color: $brown1;
-  color: white;
+  background-color: $white;
+  color: black;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
   margin-bottom: 1.5rem;
   #site-id {
     width: 30rem;
     max-width: calc(100% - 5rem);
   }
+  #menu-main-menu {
+    margin-bottom: 1rem;
+    li .nav-link {
+      font-family: $Archer;
+      font-size: calc(1.3rem + .6vw);
+      margin-top: 0;
+      margin-bottom: .5rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
 }
 
 article {
-  section {
-    padding-top: 2rem;
-    padding-bottom: 2.5rem;
-    .spacer {
-      max-height: 100%;
+  section, div.wp-block-query .wp-block-post {
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
+      .wp-block-post-featured-image img {
+        max-height: 15rem;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .wp-bootstrap-blocks-button.text-right {
+          text-align: right;
+          margin-top: -3rem;
+      }
+      &:nth-of-type(odd) {
+        a {
+          color: white;
+          text-decoration-color: rgba(255, 255, 255, .2);
+        }
+      }
+      &:nth-of-type(even) {
+        background-color: $white;
+        color: black;
+        box-shadow: 0 0px 15px 5px rgba(0,0,0,.15);
+        a {
+          color: black;
+          text-decoration-color: rgba(0, 0, 0, .2);
+        }
+      }
+      ul:not(.wp-block-post-template) {
+        margin-left: 2rem;
+        max-width: calc(100% - 2rem)!important;
+        li::marker {
+          color: $pink;
+        }
+      }
     }
-    &:nth-of-type(even) {
-      background-color: $green2;
+    .modula-item .jtg-social svg, .lightbox-socials.jtg-social svg {
+      filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.8));
+    }
+  section:nth-of-type(even) div.wp-block-query .wp-block-post {
+    background-color: $white;
+    color: black;
+    a {
       color: black;
-      box-shadow: 0 0px 15px 5px rgba(0,0,0,.15);
+      text-decoration-color: rgba(0, 0, 0, .2);
     }
   }
-  ul {
-    margin-left: 2rem;
-    max-width: calc(100% - 2rem)!important;
-    li::marker {
-      color: $brown1;
+  section div.wp-block-query .wp-block-post {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .spacer {
+    max-height: 100%;
+  }
+  img {
+    background-color: $white;
+    padding: .5rem;
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.15));
+  }
+}
+
+.pagination {
+  .page-item {
+    padding: .375rem .75rem;
+    margin-right: 0;
+  }
+  a {
+    @extend .page-link;
+    color: rgba(0, 0, 0, .55);
+    background-color: $white;
+    border-radius: 0!important;
+    &:hover {
+      z-index: 2;
+      color: black;
+      background-color: #ebe8c3;
     }
+  }
+  span {
+    @extend .page-link;
+    color: rgba(0, 0, 0, .55);
+    background-color: $white;
+    @extend .active;
+    border-radius: 0!important;
+    cursor: default;
+    &:hover {
+      color: rgba(0, 0, 0, .55);
+      background-color: $white;
+    }
+  }
+  div.wp-block-query-pagination-numbers {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .wp-block-query-pagination-previous {
+    border-top-left-radius: .25rem!important;
+    border-bottom-left-radius: .25rem!important;
+  }
+  .wp-block-query-pagination-next {
+    border-top-right-radius: .25rem!important;
+    border-bottom-right-radius: .25rem!important;
+  }
+}
+
+#backbutton, .wp-bootstrap-blocks-button a.btn {
+  background-color: $pink;
+  border-color: $pink;
+  color: black;
+  font-family: $Archer;
+  margin-top: 3rem;
+  &:hover {
+    border-color: #db8aa8;
+    background-color: #db8aa8;
   }
 }
 
 #greenbar {
-  background-color: $green1;
+  background-color: $green;
   height: 2rem;
   width: 100%;
 }
 
 footer {
-  background-color: $brown1;
-  color: white;
+  background-color: $white;
+  color: black;
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, .1);
   margin-top: auto;
   padding: 1rem;
-  span {
+  span, ul {
     vertical-align: top;
   }
-  div.navbar-dark span.navbar-text a {
-    text-decoration: underline dotted;
-    color: rgba(255,255,255,0.5);
+  div.navbar-light span.navbar-text a {
+    color: rgba(0,0,0,0.5);
+    text-decoration-color: rgba(0, 0, 0, .2);
     break-inside: avoid;
   }
-  i {
-    font-size: 2rem;
+  #menu-footer-menu li .nav-link {
+    font-family: $Archer;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  #menu-footer-social-menu {
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    i {
+      display: inline;
+      font-size: 2rem;
+      padding: .1em;
+    }
   }
 }
 
 #social {
   width: 100%;
-  a {
-    display: inline;
-    font-size: 2.5rem;
-    padding: .1em;
+  margin-bottom: 1rem;
+  li .nav-link {
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    i {
+      display: inline;
+      font-size: 2.5rem;
+      padding: .1em;
+    }
   }
 }
 
 #sidenav {
+  list-style: none;
   padding-top: 3rem;
   margin-top: -3rem;
   max-height: 50vh;
   left: 80vw;
-  a {
-    background-color: $brown1;
-    padding: 0.7rem 1rem .3rem;
+  li .nav-link {
+    font-family: $Archer;
+    font-size: calc(1.3rem + .6vw);
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgba(0,0,0,.55);
+    background-color: $white;
+    padding: 0.6rem 1rem;
     margin-bottom: 0.4rem;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .15);
+    transition: .2s;
+    &:hover {
+      margin-left: -1rem;
+      margin-right: 1rem;
+    }
+  }
+  li.active .nav-link {
+    color: black;
   }
 }
 
 //sm
 @media (min-width: 576px) {
+}
 
+@media (min-width: 600px) and (max-width: 781px) {
+  article div.wp-block-query .wp-block-post .wp-block-column:not(:only-child) {
+    flex-basis: auto !important;
+  }
 }
 
 //md
 @media (min-width: 768px) {
   #social {
     width: auto;
-    a {
+    margin-bottom: 0;
+    li {
+      font-size: 2.5rem;
       margin: .4em;
     }
   }
 
-  article section {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    &:nth-of-type(even){
-      padding-left: 5%!important;
+  article section, article div.wp-block-query .wp-block-post {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .wp-block-post-featured-image img {
+      max-height: 25rem;
+    }
+    .wp-bootstrap-blocks-button.text-right {
+      margin-top: -6rem;
+    }
+    .wp-block-column.col-12, div.col-12:not(.spacer) {
+      width: 81%;
+    }
+    /*&:nth-of-type(even){
+      //padding-left: 5%!important;
     }
     &:nth-of-type(odd){
       padding-right: 1%!important;
-    }
+      flex: 0 0 auto;
+      width: 91.6666666667%;
+    }*/
   }
 
-  #page {
-    margin-top: -243px;
+  article section div.wp-block-query .wp-block-post {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #pageContent {
+    margin-top: -300px;
   }
 
   footer {
-    h6 {
+    #menu-footer-menu li a.nav-link {
       font-size: 1.2rem;
     }
-    i {
+    #menu-footer-social-menu i {
       font-size: 1.7rem;
     }
   }
@@ -273,16 +377,25 @@ footer {
 
 //lg
 @media (min-width: 992px) {
-  #page {
-    margin-top: -256px;
+  #pageContent {
+    margin-top: -310px;
   }
 }
 
 //xl
 @media (min-width: 1200px) {
-  article section {
+  article section,  div.wp-block-query .wp-blog-post {
     &:nth-of-type(even){
       padding-left: 4.6%!important;
+      .col-12 {
+        padding-right: 2rem;
+      }
+    }
+    &:nth-of-type(odd){
+      padding-left: 4.6%!important;
+      .col-12 {
+        padding-right: 2rem;
+      }
     }
   }
 }
